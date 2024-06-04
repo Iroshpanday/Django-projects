@@ -1,2 +1,3 @@
 # Django-projects
- This the projects that i made after learning django.
+ This is the projects that i made after learning django.
+Author - Irosh Panday
