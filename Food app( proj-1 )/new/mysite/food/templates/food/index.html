@@ -1,0 +1,103 @@
+
+{% extends 'food/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+
+    {% block body %}
+    {% for item in item_list %}
+        <!-- <div class="row">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="{{ item.item_image}}" class="img-fluid rounded-start" alt="Image">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                        <h3>{{ item.item_name}}</h3>
+                        <h5>{{ item.item_desc}}</h5>
+                        <h5>{{ item.item_price}}</h5>
+                    </div>
+                    <div class="col-md-2" >
+                        <a href="{% url 'food:details' item.id %}" class=" btn btn-success">Details</a>
+        
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+              <div class="row">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{ item.item_image }}" class="img-fluid rounded-start" alt="Image">
+                        </div>
+                        <div class="col-md-8 d-flex flex-row">
+                            <div class="card-body">
+                                <h3>{{ item.item_name }}</h3>
+                                <div class="d-flex">
+                                    <h5>{{ item.item_desc }}</h5>
+                                    <a href="{% url 'food:details' item.id %}" class="btn btn-success ms-auto">Details</a>
+                                </div>
+                                <h5>{{ item.item_price }}</h5>
+                                <h5>{{ item.user_name }}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+<!-- 
+            <div class="col-md-3 offset-md-2 " height: 150px;>
+                <img  alt="Image" class="card h-100" height="150px" src="{{ item.item_image}}">
+
+            </div>
+            <div class="col-md-4">
+                <h3>{{ item.item_name}}</h3>
+                <h5>{{ item.item_desc}}</h5>
+                <h5>{{ item.item_price}}</h5>
+
+            </div>
+            <div class="col-md-2">
+                <a href="{% url 'food:details' item.id %}" class=" btn btn-success">Details</a>
+
+            </div>
+
+        
+        </div> -->
+
+
+
+    {% endfor %}
+    {% endblock %}
+
+
+
+
+
+
+    <!-- this is old code -->
+    <!-- <ul>
+        <li>
+            <!-- <a href="/food/{{ item.id }}">{{ item.id }} -- {{item.item_name}}</a>  -->
+            <!-- <a href="{% url 'food:details' item.id %}">{{ item.id }} -- {{item.item_name}}</a> -->
+            <!-- ali paxi jaba ali dherai apps haru huncxa taba diferent person lah different app banako hunxa so name judhna sakxa ra django lah ako file tanna sakxa so reduce thta conflict hamla namespace use garxau & Food: details vanara mentioned gardinxau -->
+        </li>
+    </ul> -->
+ 
+
+
+
+</body> 
+
+</html>
